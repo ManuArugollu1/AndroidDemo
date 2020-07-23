@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:padding="10dp"
+        android:hint="name"/>
+
+    <EditText
+        android:id="@+id/rollno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:padding="10dp"
+        android:hint="roll no"/>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="add"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:backgroundTint="@color/colorPrimary"/>
+
+    <EditText
+        android:id="@+id/get"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:padding="10dp"
+        android:layout_marginTop="25dp"
+        android:hint="roll no"/>
+    <Button
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="search"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:backgroundTint="@color/colorPrimary"/>
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"/>
+    <Button
+        android:id="@+id/all_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View All Data"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:backgroundTint="@color/colorPrimary"/>
+</LinearLayout>

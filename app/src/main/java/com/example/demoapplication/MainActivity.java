@@ -10,6 +10,7 @@ import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,10 +20,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    ArrayList<Map<String,String>> data=new ArrayList<>();
+    ArrayList<Map<String,Object>> data=new ArrayList<>();
     EditText name,rollno,searchRoll;
     TextView textView;
     static Context context;
+    RadioGroup genderRadioGroup;
+//    int gender=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,21 +41,39 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button.setOnClickListener(this);
         search.setOnClickListener(this);
         allDataBtn.setOnClickListener(this);
+        genderRadioGroup=findViewById(R.id.gender);
+//        genderRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+//                int checkedId=radioGroup.getCheckedRadioButtonId();
+//                if (checkedId==R.id.male){
+//                    gender=1;
+//                }else{
+//                    gender=2;
+//                }
+//
+//            }
+//        });
     }
 
     public void addData(){
-        Map<String,String> obj=new HashMap<>();
+        Map<String,Object> obj=new HashMap<>();
         obj.put("name",name.getText().toString());
-        obj.put("rollno",rollno.getText().toString());
+        obj.put("rollno",Integer.parseInt(rollno.getText().toString()));
+        int id=genderRadioGroup.getCheckedRadioButtonId();
+        if(id!=-1) {
+            obj.put("gender", id==R.id.male?1:2);
+        }
         data.add(obj);
         name.setText("");
         rollno.setText("");
+        genderRadioGroup.clearCheck();
     }
 
     public void searchData(){
-        String roll=searchRoll.getText().toString();
-        for(Map<String,String> obj:data){
-            if(obj.get("rollno").equalsIgnoreCase(roll)){
+        int roll=Integer.parseInt(searchRoll.getText().toString());
+        for(Map<String,Object> obj:data){
+            if(((int)obj.get("rollno"))==(roll)){
                 textView.setText(obj.toString());
             } else{
                 toast();

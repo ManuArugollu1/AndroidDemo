@@ -24,7 +24,30 @@
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
         android:padding="10dp"
+        android:inputType="number"
         android:hint="roll no"/>
+
+    <RadioGroup
+        android:id="@+id/gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:weightSum="1"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="MALE"/>
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="FEMALE"/>
+    </RadioGroup>
 
     <Button
         android:id="@+id/btn"
@@ -41,6 +64,7 @@
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
         android:padding="10dp"
+        android:inputType="number"
         android:layout_marginTop="25dp"
         android:hint="roll no"/>
     <Button

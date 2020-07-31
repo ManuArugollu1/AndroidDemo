@@ -1,5 +1,6 @@
 package com.example.demoapplication;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.awt.font.NumericShaper;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -125,7 +127,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             searchData();
         } else{
             Intent intent=new Intent(this,MainActivity2.class);
-           intent.putExtra("reference", (Parcelable) this);
             startActivity(intent);
         }
     }

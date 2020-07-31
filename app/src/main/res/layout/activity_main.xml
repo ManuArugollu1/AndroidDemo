@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="#B61515"
     android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <EditText
@@ -14,8 +15,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:padding="10dp"
-        android:hint="name"/>
+        android:hint="name"
+        android:padding="10dp" />
 
     <EditText
         android:id="@+id/rollno"
@@ -23,67 +24,94 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:padding="10dp"
+        android:hint="roll no"
         android:inputType="number"
-        android:hint="roll no"/>
+        android:padding="10dp" />
+
 
     <RadioGroup
         android:id="@+id/gender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
+        android:layout_marginTop="50dp"
         android:layout_marginRight="25dp"
-        android:weightSum="1"
-        android:orientation="horizontal">
+        android:layout_marginBottom="25dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:hint="Gender" />
+
         <RadioButton
             android:id="@+id/male"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="MALE"/>
+            android:text="MALE" />
+
         <RadioButton
             android:id="@+id/female"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:text="FEMALE"/>
+            android:text="FEMALE" />
+
     </RadioGroup>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="year"/>
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="year"
+        />
 
     <Button
         android:id="@+id/btn"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="add"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:backgroundTint="@color/colorPrimary"/>
+        android:backgroundTint="@color/colorPrimary"
+        android:text="add" />
 
     <EditText
         android:id="@+id/get"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:padding="10dp"
-        android:inputType="number"
         android:layout_marginTop="25dp"
-        android:hint="roll no"/>
+        android:layout_marginRight="25dp"
+        android:hint="roll no"
+        android:inputType="number"
+        android:padding="10dp" />
+
     <Button
         android:id="@+id/search"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="search"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:backgroundTint="@color/colorPrimary"/>
+        android:backgroundTint="@color/colorPrimary"
+        android:text="search" />
+
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:text="Hello World!" />
+
     <Button
         android:id="@+id/all_data"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="View All Data"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:backgroundTint="@color/colorPrimary"/>
+        android:backgroundTint="@color/colorPrimary"
+        android:text="View All Data" />
 </LinearLayout>

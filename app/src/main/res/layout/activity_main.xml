@@ -4,10 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@drawable/backgoundpic"
     android:gravity="center_horizontal"
     android:orientation="vertical"
+    android:textColor="@android:color/white"
     tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Registration Form"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@android:color/background_dark"
+        android:layout_marginTop="10dp"
+        />
 
     <EditText
         android:id="@+id/name"
@@ -16,7 +28,9 @@
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
         android:hint="name"
-        android:padding="10dp" />
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        />
 
     <EditText
         android:id="@+id/rollno"
@@ -26,6 +40,7 @@
         android:layout_marginRight="25dp"
         android:hint="roll no"
         android:inputType="number"
+        android:layout_marginTop="10dp"
         android:padding="10dp" />
 
 
@@ -34,16 +49,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="25dp"
-        android:layout_marginBottom="25dp"
         android:orientation="horizontal"
         android:weightSum="1">
 
         <TextView
             android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:hint="Gender" />
+            android:layout_height="30dp"
+            android:text="Gender" />
 
         <RadioButton
             android:id="@+id/male"
@@ -61,33 +75,44 @@
 
     </RadioGroup>
 
-    <EditText
-        android:layout_width="wrap_content"
+
+    <TextView
+        android:layout_width="361dp"
         android:layout_height="wrap_content"
-        android:hint="year"/>
+        android:layout_gravity="start"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:text="Current year" />
+
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="match_parent"
+        android:layout_width="374dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="10dp"
-        android:hint="year"
-        />
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:hint="year" />
+
+
+
 
     <Button
         android:id="@+id/btn"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="add" />
+        android:backgroundTint="@android:color/darker_gray"
+        android:text="add"
+
+        android:layout_marginTop="20dp"/>
 
     <EditText
         android:id="@+id/get"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="25dp"
         android:hint="roll no"
         android:inputType="number"
@@ -98,8 +123,9 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="search" />
+        android:backgroundTint="@android:color/darker_gray"
+        android:text="search"
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:id="@+id/text"
@@ -112,6 +138,7 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorPrimary"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@android:color/darker_gray"
         android:text="View All Data" />
 </LinearLayout>
